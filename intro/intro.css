@@ -1,0 +1,67 @@
+html {
+    
+    background-color: #1f2040;
+    font-family:  Tahoma, Arial, Helvetica, sans-serif;
+    color:#a2f2f1;
+}
+.section {
+    
+    background-color:#0a2561;
+    border-radius: 8px;
+    width: 800px;
+    margin: 20px auto;
+}
+.section h1,
+.section h2 {
+    background-color: #0d87a6;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+.section .sectionbody{
+    padding: 20px;
+    padding-bottom: 15px;
+
+}
+#profilelink:link,
+#profilelink:visited {
+    display: block;
+    background-color: #0d87a6;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align:center;
+    color: #a2f2f1;
+
+
+    width: 100px;
+    padding: 15px;
+    margin: 30px auto;
+}
+#profilelink:hover {
+    background-color: darkblue;
+    color: darkcyan;
+
+}
+#proflielink:active {
+    background-color: #a2f2f1;
+    color: darkblue;
+
+    padding: 10px;
+}
+.navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar li a {
+    display: block;
+    width: 60px;
+    color:#a2f2f1;
+    text-decoration: none;
+    background-color: #0d87a6;
+    padding: 15px;
+    text-align: center;
+}
+.navbar li a:hover{
+    background-color:darkblue;
+}
