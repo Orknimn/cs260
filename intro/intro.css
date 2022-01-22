@@ -4,24 +4,50 @@ html {
     font-family:  Tahoma, Arial, Helvetica, sans-serif;
     color:#a2f2f1;
 }
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
 .section {
     
     background-color:#0a2561;
     border-radius: 8px;
-    width: 800px;
-    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
 }
 .section h1,
 .section h2 {
     background-color: #0d87a6;
     border-radius: 8px;
-    padding: 20px;
+    width: 100%;
+    height: 40px;
     text-align: center;
+    border: 1px solid #fff;
+    
+
 }
 .section .sectionbody{
     padding: 20px;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
 
+}
+.section .sectionbody p,
+.section .sectionbody ul,
+.section .sectionbody ol {
+    margin: 20px;
+    justify-self:center;
 }
 #profilelink:link,
 #profilelink:visited {
@@ -49,19 +75,52 @@ html {
     padding: 10px;
 }
 .navbar{
-    list-style-type: none;
-    margin: 0;
+    display:flex;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+    box-sizing: border-box;
     padding: 0;
+    
 }
-.navbar li a {
+.navitem {
     display: block;
-    width: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex: 1;
+    
     color:#a2f2f1;
     text-decoration: none;
     background-color: #0d87a6;
-    padding: 15px;
     text-align: center;
+    align-self: center;
 }
-.navbar li a:hover{
+.navitem:hover, .navitem:active{
     background-color:darkblue;
+}
+@media only screen and (min-width: 961px) {
+    .page {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content:space-around;
+
+    }
+    .intro {
+        width:100%;
+    }
+    .experience,
+    .projects,
+    .contact {
+        width: 31%;
+        
+    }
+    .navbar {
+        width: 700px;
+        margin: 0 auto;
+        padding-bottom: 5vh;
+    }
+    .navitem {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }
