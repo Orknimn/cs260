@@ -198,6 +198,7 @@ p {
     justify-content: center;
 }
 .dice-button {
+    display: block;
     width: 100px;
     text-align: center;
 }
