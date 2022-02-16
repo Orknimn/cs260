@@ -7,7 +7,7 @@ document.getElementById("weatherSubmit").addEventListener("click", function(even
     }
         
     const url = "https://api.openweathermap.org/data/2.5/weather?q=" + value + 
-        ",US&units=imperial" + "&APPID=0f9693c9af64b3937952f46e202e7ade";
+        ",US&units=imperial" + "&APPID=";
     fetch(url)
         .then(function(response) {
             return response.json();
