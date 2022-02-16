@@ -6,7 +6,7 @@ document.getElementById("weatherSubmit").addEventListener("click", function(even
         return;
     }
         
-    const url = "http://api.openweathermap.org/data/2.5/weather?q=" + value + 
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=" + value + 
         ",US&units=imperial" + "&APPID=0f9693c9af64b3937952f46e202e7ade";
     fetch(url)
         .then(function(response) {
@@ -16,7 +16,7 @@ document.getElementById("weatherSubmit").addEventListener("click", function(even
             let results = "";
             results += '<h2 class="results-item">Weather in ' + json.name + "</h2>";
             for (let i=0; i < json.weather.length; ++i) {
-                results += '<img src="http://openweathermap.org/img/w/' + json.weather[i].icon + '.png" class="results-item"/>';
+                results += '<img src="https://openweathermap.org/img/w/' + json.weather[i].icon + '.png" class="results-item"/>';
             }
             results += '<h2 class="results-item">' + Math.round(json.main.temp * 10)/10 + " &deg;F</h2>";
             results += '<p class="results-item">' + "Feels Like: " + Math.round(json.main.feels_like*10)/10 + " &deg;F</p>";
@@ -35,7 +35,7 @@ document.getElementById("weatherSubmit").addEventListener("click", function(even
             
         })
 
-    const url12 = "http://api.openweathermap.org/data/2.5/forecast?q=" + value + 
+    const url12 = "https://api.openweathermap.org/data/2.5/forecast?q=" + value + 
         ", US&units=imperial" + "&APPID=0f9693c9af64b3937952f46e202e7ade";
         fetch(url12)
             .then(function(response) {
@@ -46,7 +46,7 @@ document.getElementById("weatherSubmit").addEventListener("click", function(even
                 for (let i=0; i < json.list.length; ++i) {
                     forecast += "<div class='forecast-box'>";
                     forecast += "<h2 class='forecast-item'>" + moment(json.list[i].dt_txt).format('MMMM Do h:mm A') + "</h2>";
-                    forecast += '<img src="http://openweathermap.org/img/w/' + json.list[i].weather[0].icon + '.png" class="forecast-item"/>';
+                    forecast += '<img src="https://openweathermap.org/img/w/' + json.list[i].weather[0].icon + '.png" class="forecast-item"/>';
                     forecast += "<p class='forecast-item'>" + Math.round(json.list[i].main.temp * 10)/10 + " &deg;F</p>";
                     forecast += "<p class='forecast-item'>" + "Wind Speed: " + json.list[i].wind.speed + " mph</p>";
                     forecast += "<p class='forecast-item'>" + "Humidity: " + json.list[i].main.humidity + "\%</p>";
