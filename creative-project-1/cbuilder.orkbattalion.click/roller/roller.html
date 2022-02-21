@@ -4,6 +4,7 @@
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="rollerstyles.css" />
   <title>Builder - Orkbattalion</title>
   <meta charset='UTF-8'/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -37,52 +38,74 @@
     <div class="title">
         <h1>Stats Roller</h1>
         <p>Tip: Roll dice and assign stat values to your character! (Based on DnD attributes) </p>
+        <p>Important: Once you roll, you need to assign a stat to that value before
+          you can roll again. If you have assigned the roll to a stat, you cannot assign another stat the same number
+          or change it unless you reset, so choose wisely!
+        </p>
     </div>
 
     <div class='column-page'>
         <div class='diceholder'>
+          <div class='totaller'>
+            <h2>Total Calculated</h2>
+            <p>(Lowest number dropped)</p>
+            <h2 id = 'total'>0</h2>
+          </div>
             <div class='dice'>
-                <img class='single-di'src="/images/dice.jpg">
-                <img class='single-di'src="/images/dice.jpg">
-                <img class='single-di'src="/images/dice.jpg">
-                <img class='single-di'src="/images/dice.jpg">
+                <h2 class='single-di' id="die1">0</h2>
+                <h2 class='single-di' id="die2">0</h2>
+                <h2 class='single-di' id="die3">0</h2>
+                <h2 class='single-di' id="die4">0</h2>
             </div>
             <div class='dice-buttons'>
-                <a href='' class='button dice-button'>Roll!</a>
+                <button class='button dice-button' id="roll">Roll!</button>
             </div>
+            
+        </div>
+        <div class='description-block'>
+          <p id='description'>Click on a stat to get a description for it (from dndbeyond.com)</p>
         </div>
         <div class = 'stat-block'>
             <div class='stat'>
-                <h1>Strength: 0</h1>
-                <a href='' class='button assign-button'>Assign</a>
+                <h1 id="str-stat">Strength:</h1>
+                <h1 id="str">0</h1>
+                <button class='button assign-button' id='str-assign'>Assign</button>
             </div>
             <div class='stat'>
-                <h1>Dexterity: 0</h1>
-                <a href='' class='button assign-button'>Assign</a>
+                <h1 id="dex-stat">Dexterity:</h1>
+                <h1 id="dex">0</h1>
+                <button class='button assign-button' id='dex-assign'>Assign</button>
             </div>
             <div class='stat'>
-                <h1>Constitution: 0</h1>
-                <a href='' class='button assign-button'>Assign</a>
+                <h1 id="con-stat">Constitution:</h1>
+                <h1 id="con">0</h1>
+                <button class='button assign-button' id='con-assign'>Assign</button>
             </div>
             <div class='stat'>
-                <h1>Intelligence: 0</h1>
-                <a href='' class='button assign-button'>Assign</a>
+                <h1 id="int-stat">Intelligence:</h1>
+                <h1 id="int">0</h1>
+                <button class='button assign-button' id='int-assign'>Assign</button>
             </div>
             <div class='stat'>
-                <h1>Wisdom: 0</h1>
-                <a href='' class='button assign-button'>Assign</a>
+                <h1 id="wis-stat">Wisdom:</h1>
+                <h1 id="wis">0</h1>
+                <button class='button assign-button' id='wis-assign'>Assign</button>
             </div>
             <div class='stat'>
-                <h1>Charisma: 0</h1>
-                <a href='' class='button assign-button'>Assign</a>
+                <h1 id="cha-stat">Charisma:</h1>
+                <h1 id="cha">0</h1>
+                <button class='button assign-button' id='cha-assign'>Assign</button>
             </div>
+            <button class="button" id="reset">Reset</button>
         </div>
+        
     </div>
+    
 
     <div class='footer'>
         <a href="https://github.com/Orknimn/cs260" class='button'>Github</a>
     </div>
-    
+    <script src="dice.js"></script>
 </body>
 
 </html>

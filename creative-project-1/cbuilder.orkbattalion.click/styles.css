@@ -43,6 +43,7 @@ p {
 }
 
 .title {
+    color:azure;
     margin: 0 auto;
     display: flex;
     width: 100%;
@@ -83,16 +84,30 @@ p {
 }
 .footer {
     margin: 0 auto;
+    margin-top: 80px;
     width: 100%;
     display: flex;
     background-color: #18B1CC;
     height: 80px;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    bottom: 0;
-
-
+}
+.title p {
+    color:azure;
+    width: 600px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.description-block {
+    
+    width: 300px;
+}
+#description {
+    color:azure;
+    width: auto;
+    height: auto;
+    text-align: center;
+    
 }
 .button {
     padding: 20px;
@@ -149,6 +164,7 @@ p {
     
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 .feature-buttons {
     width:300px;
@@ -182,7 +198,7 @@ p {
 }
 .dice {
     display: flex;
-    width: 200px;
+    width: 250px;
     flex-wrap: wrap;
     align-items: center;
     justify-content:space-around;
