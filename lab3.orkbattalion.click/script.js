@@ -126,7 +126,7 @@ let app = new Vue({
             return this.comments[this.number];
         },
         averageRating() {
-            if(Object.keys(this.ratings).length === 0)
+            if(this.ratings[this.number] === undefined)
                 return 0;
             else return Math.round(this.ratings[this.number].sum/this.ratings[this.number].total * 10)/10;
         }
